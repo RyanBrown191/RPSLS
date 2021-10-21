@@ -109,3 +109,40 @@ class Game {
         }
     }
     }
+    runGame(); {
+        this.playerInfo();
+        this.displayMessage();
+        do {this.playerOne.chooseGesture(); 
+            this.playerTwo.chooseGesture();
+            this.compareGestures();
+        }
+        while (this.displayGameWinner());        
+    }
+    displayGameWinner(); {
+        if (this.playerOne.score > this.playerTwo.score) {
+            alert(this.playerOne.name + " wins this game!");
+        }
+        else if (this.playerTwo.score > this.playerOne.score){
+            console.log(this.playerTwo.name + " wins this game!");
+        }
+    }
+    class Player {
+        constructor(name) {
+            this.gameGestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+            this.score = 0;
+            this.name = name;
+            this.chosenGesture;
+        }
+    }
+    class Human extends Player {
+        constructor(name) {
+            super(name);
+            this.score = 0;
+        }
+    }
+    class AI extends Player {
+        constructor(name) {
+            super(name);
+            this.score = 0;
+        }
+    }
