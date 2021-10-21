@@ -146,3 +146,8 @@ class Game {
             this.score = 0;
         }
     }
+
+    //figure out gesture array for choices
+    // AI random selection generator of AI
+    //Clean up prompts
+    
